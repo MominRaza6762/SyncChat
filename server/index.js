@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({
     origin:['https://sync-chat-client-8cfrcx2ne-mominraza355-gmailcoms-projects.vercel.app',
-  'https://sync-chat-client-nine.vercel.app'],
+    'https://sync-chat-client-nine.vercel.app'],
     credentials:true
 }));
 app.use(express.json());
