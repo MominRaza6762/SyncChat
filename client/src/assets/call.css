@@ -1,0 +1,193 @@
+.call-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .call-modal .modal-content {
+    background-color: var(--button-secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--card-shodow);
+    overflow: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .call-modal .modal-content h2 {
+    margin: 15px;
+  }
+  
+  
+  .call-modal .call-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .call-modal button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: white;
+  }
+  
+  .call-modal button:hover {
+    opacity: 0.8;
+    background-color:var(--button-hover-color);
+  }
+
+  .call-modal button img{
+    height: auto;
+    width: 30px;
+  }
+
+  .call-modal .incoming-call button img{
+    height: auto;
+    width: 40px;
+  }
+
+  .call-screens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .call-screens .screen {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    position: relative;
+    max-height: 70vh;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.3);
+  }
+
+   
+  .call-screens .screen video {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    border-radius: 1rem;
+    
+  }
+
+.call-screens .screen img{
+  width: auto;
+  height: auto;
+  max-width: 70%;
+  max-height: 90%;
+  object-fit:contain;
+  border-radius: 50%;
+}
+
+
+
+.caller-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caller-details .caller-name{
+  margin: 1rem;
+}
+.caller-details img{
+  width: auto;
+  height: 300px;
+  border-radius: 50%;
+}
+.call-screens .screen span{
+  position: absolute;
+  bottom: 1rem;
+  color: gray;
+  font-weight: 500;
+  font-size: large;
+}
+
+.call-screens .screen span::after {
+  content: "";
+  display: inline-block;
+  animation: dots 1.2s steps(4, end) infinite;
+  font-weight: bold;
+}
+
+@keyframes dots {
+  0%   { content: ""; }
+  25%  { content: "."; }
+  50%  { content: ".."; }
+  75%  { content: "..."; }
+  100% { content: ""; }
+}
+
+.call-timer{
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: larger;
+  font-weight: 500;
+  color: gray;
+}
+
+
+  @media (max-width: 768px) {
+
+    .call-modal .modal-content {
+      padding: 15px;
+    }
+
+    .call-modal .modal-content {
+      max-width: 98%;
+      max-height: 98%;
+    }
+
+    .call-modal .modal-content h2 {
+      margin: 3px;
+    }
+
+    .call-modal button img{
+      width: 20px;
+    }
+  
+    .call-modal .incoming-call button img{
+      height: auto;
+      width: 25px;
+    }
+
+    .call-screens {
+      width: 100%;
+      height: 75vh;
+    }
+    
+    .call-screens .screen {
+      max-width: 100%;
+      height: 37vh;
+      overflow: hidden;
+      box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.3);
+    }
+  
+  }
+  
