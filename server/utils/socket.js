@@ -16,7 +16,8 @@ export function initializeSocket(app) {
 
       io = new Server(httpServer, {
         cors: {
-            origin: ['http://localhost:5173', 'http://192.168.18.64:5173'],
+            origin: ['https://sync-chat-client-8cfrcx2ne-mominraza355-gmailcoms-projects.vercel.app',
+  'https://sync-chat-client-nine.vercel.app'],
             methods: ["GET", "POST"],
             credentials: true
         }
