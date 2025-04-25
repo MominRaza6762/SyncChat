@@ -1,13 +1,6 @@
 import axios from "axios";
-
-
 const API = axios.create({
-    baseURL: "http://192.168.18.64:5000/",
-    
-    
-    
+    baseURL: "https://sync-chat-server-beryl.vercel.app/",
     withCredentials:true,
-
 })
-
 export default API;
