@@ -22,47 +22,29 @@ export const CallProvider = ({ children }) => {
   const pendingCandidates = useRef([]); 
   
 
-  // const iceServers = {
-  //   iceServers: [
-  //     {
-  //       urls: ["stun:stun.l.google.com:19302"]  
-  //     },
-  //     {
-  //       urls: "turn:openrelay.metered.ca:80",
-  //       username: "openrelayproject",
-  //       credential: "openrelayproject"
-  //     },
-  //      {
-  //       urls: import.meta.env.VITE_STURN_SERVER1_URLS,
-  //       username: import.meta.env.VITE_STURN_SERVER1_USERNAME,
-  //       credential: import.meta.env.VITE_STURN_SERVER1_CREDENTIAL
-  //     }, {
-  //       urls: import.meta.env.VITE_STURN_SERVER2_URLS,
-  //       username: import.meta.env.VITE_STURN_SERVER2_USERNAME,
-  //       credential: import.meta.env.VITE_STURN_SERVER2_CREDENTIAL
-  //     }
-  //   ]
-  // };
-
-  const iceServers = [
-  {
-    urls: [ "stun:ss-turn1.xirsys.com" ]
-  },
-  {
-    username: "1032IvzbszikpG6WX753KtWxXCTLyRCTCJKPBOVEym0Xa5Kn6rzK6h7l2sUgQYCdAAAAAGgHPRxNb21pblJhemE=",
-    credential: "9dd3aa00-1f46-11f0-913d-0242ac140004",
-    urls: [
-      "turn:ss-turn1.xirsys.com:80?transport=udp",
-      "turn:ss-turn1.xirsys.com:3478?transport=udp",
-      "turn:ss-turn1.xirsys.com:80?transport=tcp",
-      "turn:ss-turn1.xirsys.com:3478?transport=tcp",
-      "turns:ss-turn1.xirsys.com:443?transport=tcp",
-      "turns:ss-turn1.xirsys.com:5349?transport=tcp"
+  const iceServers = {
+    iceServers: [
+      {
+        urls: ["stun:stun.l.google.com:19302"]  
+      },
+      {
+        urls: "turn:openrelay.metered.ca:80",
+        username: "openrelayproject",
+        credential: "openrelayproject"
+      },
+       {
+        urls: import.meta.env.VITE_STURN_SERVER1_URLS,
+        username: import.meta.env.VITE_STURN_SERVER1_USERNAME,
+        credential: import.meta.env.VITE_STURN_SERVER1_CREDENTIAL
+      }, {
+        urls: import.meta.env.VITE_STURN_SERVER2_URLS,
+        username: import.meta.env.VITE_STURN_SERVER2_USERNAME,
+        credential: import.meta.env.VITE_STURN_SERVER2_CREDENTIAL
+      }
     ]
-  }
-];
+  };
 
-
+  
   const startCall = async (to, callType, localStreamArg, userId ,setAlert ) => {
     socket.emit("join-call", { userId });
   
