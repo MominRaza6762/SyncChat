@@ -4,7 +4,6 @@ dotenv.config();
 
 const authenticateUser =(req , res , next)=>{
     const token = req.cookies?.token;
-    console.log(token)
 
     if(!token)
     {
@@ -14,7 +13,7 @@ const authenticateUser =(req , res , next)=>{
     {
         const user = jwt.verify(token,process.env.SECRET_KEY);
          console.log(user)
-        req.user = user;
+
         next();
     }
     catch (error) {
