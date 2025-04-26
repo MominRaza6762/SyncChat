@@ -81,7 +81,7 @@ export const verifyOtp = async (req , res)=>{
 
         res.cookie("token", token ,{
             httpOnly:true,
-            sameSite:"strict",
+            sameSite:"none",
             secure: true,
             maxAge: 7 * 24 * 60 * 60 * 1000  
         })
@@ -126,7 +126,7 @@ export const saveProfile = async(req , res)=>{
           
           res.cookie("token", token ,{
             httpOnly:true,
-            sameSite:"strict",
+            sameSite: "none",
             secure: true,
             maxAge: 7 * 24 * 60 * 60 * 1000  
         })
@@ -153,7 +153,8 @@ export const logOut = async(req , res)=>{
           );
         res.clearCookie('token',{
             httpOnly:true,
-            sameSite:"strict",
+            sameSite: "none",
+            secure: true,
             maxAge: 7 * 24 * 60 * 60 * 1000  
         })
         res.status(200).json({success: true , message:"user logged out successfully..." });
@@ -180,7 +181,7 @@ export const  saveFCMToken  = async (req, res) => {
                 
                 res.cookie("token", authToken ,{
                   httpOnly:true,
-                  sameSite:"strict",
+                  sameSite: "none",
                   secure: true,
                   maxAge: 7 * 24 * 60 * 60 * 1000  
               })
