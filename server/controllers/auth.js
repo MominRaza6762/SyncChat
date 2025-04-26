@@ -82,6 +82,7 @@ export const verifyOtp = async (req , res)=>{
         res.cookie("token", token ,{
             httpOnly:true,
             sameSite:"strict",
+            secure: true,
             maxAge: 7 * 24 * 60 * 60 * 1000  
         })
         res.status(200).json({success: true , message:"user verified successfully..." })
@@ -126,6 +127,7 @@ export const saveProfile = async(req , res)=>{
           res.cookie("token", token ,{
             httpOnly:true,
             sameSite:"strict",
+            secure: true,
             maxAge: 7 * 24 * 60 * 60 * 1000  
         })
           res.status(200).json({success: true , message:"user profile saved successfully..." });
@@ -179,6 +181,7 @@ export const  saveFCMToken  = async (req, res) => {
                 res.cookie("token", authToken ,{
                   httpOnly:true,
                   sameSite:"strict",
+                  secure: true,
                   maxAge: 7 * 24 * 60 * 60 * 1000  
               })
       res.status(200).json({ success:true , message: "fcm token saved!" });
