@@ -66,6 +66,7 @@ const ChatApp = () => {
 
 
   useEffect(() => {
+    setTimeout(()=>{
     const saveToken =async(token)=>{
       try{
         await API.post("/auth/save_token",{token})
@@ -97,11 +98,11 @@ const ChatApp = () => {
         }
       }
     })()
+  },3000)
 
     listenToNotifications();
 
   }, []);
-
   
     useEffect(()=>{
       newMessagesIndicate.forEach((indicate)=>{
@@ -315,10 +316,11 @@ const ChatApp = () => {
 
   },[])
   
-  useEffect(()=>{
-    getChats()
-  },[])
-  
+    useEffect(()=>{
+    setTimeout(()=>{
+      getChats()
+    },1500)
+  },[])  
 
   return (
     <div className="chat-container">
