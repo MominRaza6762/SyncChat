@@ -34,6 +34,7 @@ router.put("/save_profile", upload.single('profilePic'), saveProfile);
 router.delete("/log_out",authenticateUser, logOut);
 
 router.get("/me", authenticateUser, (req , res)=>{
+    console.log(req.user)
     res.status(200).json({user:req.user})
 });
 
