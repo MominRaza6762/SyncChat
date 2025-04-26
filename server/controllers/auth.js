@@ -146,6 +146,7 @@ export const saveProfile = async(req , res)=>{
 export const logOut = async(req , res)=>{
     try
     {
+        if(!req.user.id) retuen;
         await User.findByIdAndUpdate(
             req.user.id,
             { $unset: { fcmToken: 1 } },
