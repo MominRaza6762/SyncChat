@@ -175,7 +175,6 @@ export const  saveFCMToken  = async (req, res) => {
     if (!token) return res.status(400).json({success: false , message:"FCM token is required" });
   
     try {
-        console.log("user id from fcm controller",req.user.id);
       const updatedUser = await User.findByIdAndUpdate(req.user.id, { fcmToken: token }, { new: true });
 
       const authToken = jwt.sign({id : updatedUser._id , email: updatedUser.email ,name : updatedUser.name , profilePic : updatedUser.profilePic,fcmToken:updatedUser.fcmToken || null},process.env.SECRET_KEY  , {expiresIn:"7d"});
