@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: SyncChat-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+     rootDir: server 
+    envVars:
+     - key: MONGO_URI
+        fromEnv: MONGO_URI
+      - key: PORT
+        value: 5000
+      - key: JWT_SECRET
+        fromEnv: JWT_SECRET
+      - key: CLOUDINARY_API_KEY
+        fromEnv: CLOUDINARY_API_KEY
+      - key: CLOUDINARY_API_SECRET
+        fromEnv: CLOUDINARY_API_SECRET
+      - key: EMAIL_USER
+        fromEnv: EMAIL_USER
+      - key: EMAIL_PASS
+        fromEnv: EMAIL_PASS
+      - key: FIREBASE_ADMIN_KEY
+        fromEnv: FIREBASE_ADMIN_KEY
+      - key: NODE_ENV
+        value: production
