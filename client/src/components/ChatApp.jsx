@@ -98,7 +98,7 @@ const ChatApp = () => {
         }
       }
     })()
-  },1000)
+  },3000)
 
     listenToNotifications();
 
@@ -319,7 +319,7 @@ const ChatApp = () => {
     useEffect(()=>{
     setTimeout(()=>{
       getChats()
-    },500)
+    },1500)
   },[])  
 
   return (
