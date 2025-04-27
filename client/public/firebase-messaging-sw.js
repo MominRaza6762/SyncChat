@@ -27,6 +27,6 @@ self.addEventListener('notificationclick', function(event) {
   console.log("notification")
   event.notification.close();
   event.waitUntil(
-    clients.openWindow('http://localhost:5173/') 
+    clients.openWindow('https://sync-chat-client-nine.vercel.app/') 
   );
 });
