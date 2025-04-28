@@ -15,7 +15,7 @@ Access the project code and repository:
 - **Email-based Authentication**: Log in with email and OTP.
 - **JWT Authentication**: 7-day expiry JWT token stored in HTTP-only cookies.
 - **Real-Time Messaging**: Chat messages sent and received in real-time using Socket.IO.
-- **Push Notifications**: Get notifications for new messages.
+- **Push Notifications**: Get notifications for new messages using Firebase Cloud Messaging.
 - **Audio/Video Calls**: Real-time voice and video calling through WebRTC.
 - **Media Sharing**: Share images, videos, and audio files in chats.
 - **Voice Messages**: Send voice messages in individual and group chats.
@@ -28,11 +28,11 @@ Access the project code and repository:
 ## Tech Stack
 
 - **Frontend**: React.js, Socket.IO client, WebRTC, React Router DOM
-- **Backend**: Node.js, Express.js, JWT, Multer (for file uploads), Cloudinary (for image/video storage), Socket.IO
+- **Backend**: Node.js, Express.js, MongoDB, JWT, Multer (for file uploads), Cloudinary (for image/video storage), Firebase Cloud Messaging, Socket.IO ,
 - **Database**: MongoDB
 - **Libraries/Tools**:
   - **Frontend**: React, Socket.IO client, WebRTC, React Router DOM
-  - **Backend**: JWT, bcryptjs, Cloudinary, Multer, Socket.IO
+  - **Backend**: JWT, bcryptjs, Cloudinary, Multer, Socket.IO, Firebase Cloud Messaging
 
 ## Installation
 
