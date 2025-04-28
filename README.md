@@ -23,7 +23,6 @@ Access the project code and repository:
 - **Message Delivery Indicators**: See if the message is delivered or read.
 - **Online/Offline Status**: See the online status of users.
 - **Message Deletion**: Delete messages for yourself or everyone in the chat.
-- **Profile Management**: Users can set and update their profiles.
 - **Admin Controls**: Admins can remove participants from the group and update group details.
 
 ## Tech Stack
