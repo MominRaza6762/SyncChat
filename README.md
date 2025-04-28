@@ -55,7 +55,7 @@ Access the project code and repository:
 
 1. Clone the repository:
    ```bash
-  git clone https://github.com/MominRaza6762/SyncChat.git
+   git clone https://github.com/MominRaza6762/SyncChat.git
    cd Job-Board
 2. Install dependencies:
 
