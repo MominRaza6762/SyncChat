@@ -62,6 +62,7 @@ Access the project code and repository:
    ```bash
    cd server
    npm install
+
 3. Set up environment variables (.env):
    PORT (server port)
 
