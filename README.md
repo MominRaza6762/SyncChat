@@ -133,4 +133,4 @@ PORT=5000
   - Create a new group or join an existing one.
   - Start messaging users or groups.
   - Share media, send voice messages, and more.
-4. You can test the app by adding users such as mominraza354@gmail.com to test chat functionalities.
+4.  Since this is a real-time chat application, testing requires at least two user accounts. You can create multiple accounts using different email addresses. After creating both users, log in with one account and add the other user by entering their email to start chatting.
